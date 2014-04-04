@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+   
+    android:gravity="center_horizontal"
+    android:orientation="vertical" 
+    android:background="@color/background">
+
+  
+            <EditText
+                android:id="@+id/uname"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:hint="@string/username"
+                android:inputType="text"
+                android:text="" />
+
+            <EditText
+                android:id="@+id/pswd"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:text="" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:text="" />
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal" >
+
+                <Button
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="onSigninClicked"
+                     android:background="@drawable/medium_btn_style"
+                    android:text="@string/signin_button" />
+
+                <Button
+                    android:layout_width="140dp"
+                    android:paddingLeft="20dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRegisterClicked"
+                     android:background="@drawable/medium_btn_style"
+                    android:text="@string/register_button" />
+            </LinearLayout>
+       <TextView
+        android:id="@+id/error_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"          
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"   
+        android:layout_marginLeft="5dp"
+         android:layout_marginRight="5dp"
+        android:layout_gravity="center"  
+        android:visibility="gone"
+        android:text=""/>    
+</LinearLayout>

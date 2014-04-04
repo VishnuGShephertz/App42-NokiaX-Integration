@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/menu_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background" >
+ 
+     <EditText
+        android:id="@+id/income"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Your Income"
+        android:layout_marginTop="30dp"
+        android:inputType="number"
+        android:layout_alignParentTop="true"
+        android:maxLength="25" >
+
+    </EditText>
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/income"
+        android:layout_centerHorizontal="true"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/btn_get"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"          
+            android:layout_marginTop="10dp"
+            android:background="@drawable/medium_btn_style"
+            android:onClick="onGetStorageClicked"
+            android:text="GetDocuments"
+            android:textColor="@color/txt_color"
+            android:textSize="22dp" />
+
+        <Button
+            android:id="@+id/btn_insert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_get"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/medium_btn_style"
+            android:onClick="onInsertDocClicked"
+            android:text="InsertDocument"
+            android:textColor="@color/txt_color"
+            android:textSize="22dp" />
+        </RelativeLayout>
+        
+          <TextView
+        android:id="@+id/error_msg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"     
+        android:layout_below="@+id/relativeLayout1"     
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"   
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:text="dddd"/>    
+     <ListView
+        android:id="@+id/users_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:layout_below="@+id/relativeLayout1"   
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dp" >
+
+    </ListView>
+   
+
+</RelativeLayout>
